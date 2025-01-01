@@ -8,7 +8,7 @@
         <!-- Donasi Makanan -->
         <div class="col-md-4">
             <div class="card shadow-lg border-0 h-100 fade-in">
-                <img class="card-img-top" src="{{ Vite::asset('resources/images/gambarmakanan.jpg') }}" alt="gambar makanan">
+                <img class="card-img-top" src="{{ Vite::asset('resources/images/fdstorage.png') }}" alt="gambar makanan">
                 <div class="card-body text-center">
                     <h3 class="card-title">Donasi Makanan</h3>
                     <p class="card-text">Donasikan makanan untuk mereka yang membutuhkan.</p>
@@ -20,7 +20,7 @@
         <!-- Donasi Tunai -->
         <div class="col-md-4">
             <div class="card shadow-lg border-0 h-100 fade-in">
-                <img class="card-img-top" src="{{ Vite::asset('resources/images/gambartunai.jpg') }}" alt="gambar tunai">
+                <img class="card-img-top" src="{{ Vite::asset('resources/images/send.jpg') }}" alt="gambar tunai">
                 <div class="card-body text-center">
                     <h3 class="card-title">Donasi Tunai</h3>
                     <p class="card-text">Donasikan uang tunai untuk membantu lebih banyak orang.</p>
