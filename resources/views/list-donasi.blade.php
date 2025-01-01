@@ -22,9 +22,9 @@
             <div class="tab-pane fade show active" id="tunai" role="tabpanel" aria-labelledby="tunai-tab">
                 <div class="table-responsive">
                     <table class="table table-hover">
-                        <thead class="table-success">
+                        <thead class="table-warning">
                             <tr>
-                                <th>#</th>
+                                <th>No</th>
                                 <th>Nama</th>
                                 <th>Pesan</th>
                                 <th>Jumlah Donasi</th>
@@ -79,9 +79,9 @@
             <div class="tab-pane fade" id="makanan" role="tabpanel" aria-labelledby="makanan-tab">
                 <div class="table-responsive">
                     <table class="table table-hover">
-                        <thead class="table-primary">
+                        <thead class="table-warning">
                             <tr>
-                                <th>#</th>
+                                <th>No</th>
                                 <th>Nama</th>
                                 <th>Alamat</th>
                                 <th>Nama Makanan</th>

@@ -26,7 +26,7 @@ class DonasiTunaiController extends Controller
         ]);
 
         // Redirect dengan Pesan Sukses
-        return redirect()->back()->with('success', 'Terima kasih! Donasi tunai Anda berhasil disimpan.');
+        return redirect()->back()->with('success', 'Terima kasih atas kebaikan anda hari ini..');
     }
 
     public function destroy($id)

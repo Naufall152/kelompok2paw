@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+@if (session('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
 <div class="container py-5 fade-in">
     <!-- Card Form -->
     <div class="card mx-auto shadow-lg fade-in" style="max-width: 500px;">
@@ -48,18 +55,6 @@
                 <!-- Opsi Pengiriman -->
                 <div class="mb-3">
                     <label class="form-label">Opsi Pengiriman</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="deliveryOption" id="selfDelivery" value="Self Delivery" required>
-                        <label class="form-check-label" for="selfDelivery">
-                            Saya akan mengantar sendiri
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="deliveryOption" id="pickupRequest" value="Pickup Request" required>
-                        <label class="form-check-label" for="pickupRequest">
-                            Silakan jemput di lokasi saya
-                        </label>
-                    </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="deliveryOption" id="goSend" value="Go Send" required>
                         <label class="form-check-label" for="goSend">
