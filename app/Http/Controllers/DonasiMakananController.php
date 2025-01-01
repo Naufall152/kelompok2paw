@@ -31,6 +31,7 @@ class DonasiMakananController extends Controller
             'pesan' => $validated['message'] ?? null,
         ]);
 
+
         // Redirect dengan Pesan Sukses
         return redirect()->back()->with('success', 'Donasi makanan berhasil disimpan!');
     }
