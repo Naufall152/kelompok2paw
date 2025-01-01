@@ -1,79 +1,63 @@
 @extends('layouts.app2')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center" style="background-color: #f7f7f7;">
+    <div class="row w-100 shadow-lg" style="max-width: 1000px; border-radius: 20px; overflow: hidden;">
+        <!-- Left Side -->
+        <div class="col-md-6 d-flex flex-column align-items-center justify-content-center bg-dark text-white p-5">
+            <h1 class="mb-3" style="font-size: 2.5rem; font-weight: bold; color: #ffa500;">Selamat Datang!</h1>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+            <img src="{{ Vite::asset('resources/images/faf.png') }}" alt="Illustration" class="img-fluid mt-4" style="border-radius: 10px;">
+        </div>
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+        <!-- Right Side -->
+        <div class="col-md-6 bg-white d-flex align-items-center justify-content-center p-5">
+            <div class="w-100" style="max-width: 400px;">
+                <h4 class="text-center mb-4" style="font-size: 1.8rem; font-weight: bold; color: #ffa500;">LOGIN</h4>
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <!-- Email -->
+                    <div class="form-floating mb-4">
+                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                    <!-- Password -->
+                    <div class="form-floating mb-4">
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                    <!-- Submit Button -->
+                    <div class="d-flex justify-content-center mb-3">
+                        <button type="submit" class="btn btn-lg text-white" style="background-color: #ffa500; border: none;">
+                            Log In
+                        </button>
+                    </div>
 
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-
-                                @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    <!-- Register Link -->
+                    <div class="text-center">
+                        <p>Belum punya akun?
+                            <a href="{{ route('register') }}" class="text-decoration-none" style="color: #ffa500;">
+                                Klik disini!
+                            </a>
+                        </p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 @endsection
