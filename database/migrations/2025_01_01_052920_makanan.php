@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('makanan', function (Blueprint $table) {
             $table->id();
-            $table->string('nama'); // Nama donatur
-            $table->string('no_telp'); // Nomor telepon donatur
-            $table->text('alamat'); // Alamat donatur
-            $table->string('nama_makanan'); // Nama makanan
-            $table->string('jenis_makanan'); // Jenis makanan
-            $table->string('opsi_pengiriman'); // Opsi pengiriman
-            $table->text('pesan')->nullable(); // Pesan opsional
+            $table->string('nama');
+            $table->string('no_telp');
+            $table->text('alamat');
+            $table->string('nama_makanan');
+            $table->string('jenis_makanan');
+            $table->string('opsi_pengiriman');
+            $table->text('pesan')->nullable();
             $table->timestamps();
         });
     }

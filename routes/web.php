@@ -43,17 +43,14 @@ Route::get('/donasi/tunai', function () {
     return view('donasi.tunai'); // Pastikan ada file Blade bernama tunai.blade.php
 })->name('donasi.tunai');
 
-
 Route::post('/donasi-tunai', [DonasiTunaiController::class, 'store'])->name('donasi.tunai.store');
+
 Route::post('/donasi-makanan', [DonasiMakananController::class, 'store'])->name('donasi.makanan.store');
 
 Route::get('/list-donasi', [ListDonasiController::class, 'index'])->name('list.donasi');
 
-
-// Donasi Tunai
 Route::delete('/donasi-tunai/{id}', [DonasiTunaiController::class, 'destroy'])->name('donasi.tunai.destroy');
 
-// Donasi Makanan
 Route::delete('/donasi-makanan/{id}', [DonasiMakananController::class, 'destroy'])->name('donasi.makanan.destroy');
 
 Route::get('/donasi.makanan/{id}', [DonasiMakananController::class, 'show'])->name('donasi.makanan.show');

@@ -1,8 +1,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,7 +31,6 @@
 <footer class="footer bg-dark text-center">
     <div class="container">
         <div class="row">
-            <!-- Logo dan Deskripsi -->
             <div class="col-md-4 mb-3">
                 <img src="{{ Vite::asset('resources/images/no-bg.png') }}" alt="Sponsor 1" class="img-fluid"
                     width="120">
@@ -43,9 +40,6 @@
                     menyediakan bantuan makanan bagi mereka yang membutuhkan, untuk bersama-sama mengurangi kelaparan.
                 </p>
             </div>
-
-
-            <!-- Media Sosial -->
             <div class="col-md-4 mb-4 text-end">
                 <h5 class="text-uppercase">Ikuti Kami</h5>
                 <div class="social-icons">

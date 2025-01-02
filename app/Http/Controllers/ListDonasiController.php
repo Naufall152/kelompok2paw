@@ -9,11 +9,10 @@ class ListDonasiController extends Controller
 {
     public function index()
     {
-        // Ambil semua data dari tabel tunai dan makanan
+
         $donasiTunai = Tunai::all();
         $donasiMakanan = Makanan::all();
 
-        // Kirim data ke view
         return view('list-donasi', compact('donasiTunai', 'donasiMakanan'));
     }
 }

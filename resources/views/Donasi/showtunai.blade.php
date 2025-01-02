@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container py-5">
     <div class="card shadow-lg border-0" style="border-radius: 15px;">
@@ -8,7 +7,6 @@
         </div>
         <div class="card-body p-4">
             <div class="row">
-                <!-- Detail Info -->
                 <div class="col-md-6">
                     <h5 class="mb-3" style="color: #333;">Informasi Donatur</h5>
                     <table class="table table-borderless">
@@ -24,8 +22,6 @@
                         </tbody>
                     </table>
                 </div>
-
-                <!-- Donasi Info -->
                 <div class="col-md-6">
                     <h5 class="mb-3" style="color: #333;">Informasi Donasi</h5>
                     <table class="table table-borderless">
@@ -46,8 +42,6 @@
                     </table>
                 </div>
             </div>
-
-            <!-- Kembali Button -->
             <div class="text-center mt-4">
                 <a href="{{ route('list.donasi') }}" class="btn btn-outline-secondary btn-lg" style="border-radius: 25px;">
                     <i class="fas fa-arrow-left"></i> Kembali

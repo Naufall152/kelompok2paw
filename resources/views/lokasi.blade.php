@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Always Bottom</title>
+    <title>Lokasi</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -74,7 +74,6 @@
                     </p>
                 </div>
             </div>
-            <!-- Add more content here for horizontal scrolling -->
         </div>
     </main>
 
@@ -85,12 +84,8 @@
 
     <script>
         const key = 'mhkhgb1kkLqv9H9sr2Jt';
-
-        // Passing PHP variables to JavaScript
         const markerIconUrl = @json($markerIconUrl);
-
         const map = L.map('map').setView([-7.2707321084187335, 112.75464562093983], 14);
-
         const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 159,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -285,8 +280,8 @@
 
 
         map.on('click', function(e) {
-            var coordinates = e.latlng.toString(); // Get coordinates as a string
-            alert("Stasiun makanan berada di :  " + coordinates); // Display in an alert
+            var coordinates = e.latlng.toString();
+            alert("Stasiun makanan berada di :  " + coordinates);
         });
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
