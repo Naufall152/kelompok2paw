@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('tunai', function (Blueprint $table) {
             $table->id();
-            $table->string('nama'); // Nama donatur
-            $table->text('pesan'); // Pesan donatur
-            $table->decimal('jumlah_donasi', 10, 2); // Jumlah donasi
-            $table->string('opsi_pembayaran'); // Opsi pembayaran
+            $table->string('nama');
+            $table->text('pesan');
+            $table->decimal('jumlah_donasi', 10, 2);
+            $table->string('opsi_pembayaran');
             $table->timestamps();
         });
     }

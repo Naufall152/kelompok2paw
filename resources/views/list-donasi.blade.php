@@ -1,10 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container py-5">
         <h1 class="text-center mb-4">Histori Donasi</h1>
-
-        <!-- Tabs untuk Donasi Tunai dan Donasi Makanan -->
         <ul class="nav nav-tabs" id="donasiTabs" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="tunai-tab" data-bs-toggle="tab" data-bs-target="#tunai" type="button"
@@ -15,9 +12,8 @@
                     role="tab" aria-controls="makanan" aria-selected="false">Donasi Makanan</button>
             </li>
         </ul>
-
-        <!-- Content Tabs -->
         <div class="tab-content mt-4" id="donasiTabsContent">
+
             <!-- Donasi Tunai -->
             <div class="tab-pane fade show active" id="tunai" role="tabpanel" aria-labelledby="tunai-tab">
                 <div class="table-responsive">
@@ -44,7 +40,6 @@
                                     <td>{{ $donasi->opsi_pembayaran }}</td>
                                     <td>{{ $donasi->created_at->format('d-m-Y H:i') }}</td>
                                     <td>
-                                        <!-- Form Hapus -->
                                         <form action="{{ route('donasi.tunai.destroy', $donasi->id) }}" method="POST"
                                             onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
                                             @csrf
@@ -75,7 +70,7 @@
                 </div>
             </div>
 
-            <!-- Donasi Makanan -->
+            <!-- Makanan -->
             <div class="tab-pane fade" id="makanan" role="tabpanel" aria-labelledby="makanan-tab">
                 <div class="table-responsive">
                     <table class="table table-hover">
@@ -105,7 +100,6 @@
                                     <td>{{ $donasi->pesan }}</td>
                                     <td>{{ $donasi->created_at->format('d-m-Y H:i') }}</td>
                                     <td>
-                                        <!-- Form Hapus -->
                                         <form action="{{ route('donasi.makanan.destroy', $donasi->id) }}" method="POST"
                                             onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">
                                             @csrf

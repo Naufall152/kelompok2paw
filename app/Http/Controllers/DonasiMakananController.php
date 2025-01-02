@@ -9,7 +9,6 @@ class DonasiMakananController extends Controller
 {
     public function store(Request $request)
     {
-        // Validasi Data
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
@@ -20,7 +19,6 @@ class DonasiMakananController extends Controller
             'message' => 'nullable|string',
         ]);
 
-        // Simpan Data ke Database
         Makanan::create([
             'nama' => $validated['name'],
             'no_telp' => $validated['phone'],
@@ -31,21 +29,20 @@ class DonasiMakananController extends Controller
             'pesan' => $validated['message'] ?? null,
         ]);
 
-
-        // Redirect dengan Pesan Sukses
         return redirect()->back()->with('success', 'Donasi makanan berhasil disimpan!');
     }
+
     public function destroy($id)
-{
-    $donasi = Makanan::findOrFail($id);
-    $donasi->delete();
+    {
+        $donasi = Makanan::findOrFail($id);
+        $donasi->delete();
 
-    return redirect()->route('list.donasi')->with('success', 'Donasi makanan berhasil dihapus.');
-}
+        return redirect()->route('list.donasi')->with('success', 'Donasi makanan berhasil dihapus.');
+    }
 
-public function show($id)
-{
-    $donasi = Makanan::findOrFail($id);
-    return view('donasi.showmakanan', compact('donasi'));
-}
+    public function show($id)
+    {
+        $donasi = Makanan::findOrFail($id);
+        return view('donasi.showmakanan', compact('donasi'));
+    }
 }

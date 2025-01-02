@@ -1,12 +1,9 @@
 @extends('layouts.app')
-
 @section('content')
 
 <div class="container py-5 fade-in">
     <p class="text-center mb-5 fade-in" style="animation-delay: 0.2s;">Pilih jenis donasi yang ingin Anda lakukan:</p>
-
     <div class="row justify-content-center">
-        <!-- Donasi Makanan -->
         <div class="col-md-4 fade-in" style="animation-delay: 0.4s;">
             <div class="card shadow-lg border-0 h-100">
                 <img class="card-img-top" src="{{ Vite::asset('resources/images/fdstorage.png') }}" alt="gambar makanan">
@@ -18,7 +15,6 @@
             </div>
         </div>
 
-        <!-- Donasi Tunai -->
         <div class="col-md-4 fade-in" style="animation-delay: 0.6s;">
             <div class="card shadow-lg border-0 h-100">
                 <img class="card-img-top" src="{{ Vite::asset('resources/images/send.jpg') }}" alt="gambar tunai">

@@ -1,17 +1,12 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container py-5">
     <div class="card shadow-lg border-0" style="border-radius: 15px;">
-        <!-- Header Card -->
         <div class="card-header text-white text-center" style="background-color: #ffa500; border-top-left-radius: 15px; border-top-right-radius: 15px;">
             <h4 class="mb-0">Detail Donasi Makanan</h4>
         </div>
-
-        <!-- Body Card -->
         <div class="card-body p-4">
             <div class="row">
-                <!-- Informasi Donasi -->
                 <div class="col-md-6">
                     <h5 class="mb-3" style="color: #333;">Informasi Donatur</h5>
                     <table class="table table-borderless">
@@ -29,8 +24,6 @@
                         </tr>
                     </table>
                 </div>
-
-                <!-- Detail Makanan -->
                 <div class="col-md-6">
                     <h5 class="mb-3" style="color: #333;">Detail Donasi</h5>
                     <table class="table table-borderless">
@@ -53,8 +46,6 @@
                     </table>
                 </div>
             </div>
-
-            <!-- Tombol Kembali -->
             <div class="text-center mt-4">
                 <a href="{{ route('list.donasi') }}" class="btn btn-outline-secondary btn-lg" style="border-radius: 25px;">
                     <i class="fas fa-arrow-left"></i> Kembali ke Daftar Donasi

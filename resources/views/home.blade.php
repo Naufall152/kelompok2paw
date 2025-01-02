@@ -2,19 +2,16 @@
 
 @section('content')
 <head>
-    @vite(['resources/css/app.css', 'resources/js/app.js']) {{-- Bootstrap & Asset --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> {{-- Animate.css --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         .carousel-inner img {
             max-height: 600px;
-            /* Atur tinggi maksimum */
             object-fit: cover;
-            /* Menyesuaikan gambar agar tidak terdistorsi */
         }
-
         .carousel-caption {
             bottom: 20%;
-            /* Menyesuaikan posisi teks */
+
         }
 
         .fade-in {
@@ -63,7 +60,6 @@
         </div>
         <div class="container py-5">
             <div class="row align-items-center">
-                <!-- Teks About -->
                 <div class="col-md-6 fade-in" id="about-text">
                     <h1 class="mb-4" style="color: #ffa500;">About FoodForAll</h1>
                     <p>
@@ -73,8 +69,6 @@
                         FoodForAll membantu orang yang membutuhkan makanan dengan menyediakan informasi lokasi bantuan makanan dan memudahkan masyarakat untuk berdonasi secara online. Selain itu, platform ini juga bertujuan membangun solidaritas sosial, mempererat rasa kepedulian, serta menciptakan ekosistem berbagi yang lebih mudah dan transparan.
                     </p>
                 </div>
-
-                <!-- Gambar About -->
                 <div class="col-md-6 text-center fade-in" id="about-image">
                     <img src="{{ Vite::asset('resources/images/faf.png') }}" alt="gambar faf" class="img-fluid rounded shadow" style="max-width: 100%;">
                 </div>
@@ -82,7 +76,7 @@
         </div>
     </main>
     <footer class="bg-dark text-white text-center py-4 mt-auto">
-        @include('layouts.footer') {{-- Footer --}}
+        @include('layouts.footer')
     </footer>
 </div>
 
